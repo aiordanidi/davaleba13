@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The X Place</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&family=Space+Grotesk:wght@300..700&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: #1a0b50;
+        margin-left: 15%;
+        margin-right: 15%;
+      }
+
+      .navdirection {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+      }
+
+      .navdiv {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+      }
+
+      .first-container__img {
+        border-radius: 40px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .covervideo {
+        border: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 800px;
+        width: 1600px;
+        object-fit: contain;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 10%;
+      }
+
+      .textbox {
+        width: fit-content;
+        position: relative;
+        top: 30em;
+        left: 20em;
+      }
+
+      .container-wrapper {
+        margin: auto;
+        padding: 20px;
+      }
+      ||/* slider */
+      
+.ms-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-family: sans-serif;
+
+        width: 100vw;
+        height: 100vh;
+
+        background: linear-gradient(
+          to right bottom,
+          rgb(157, 215, 213),
+          lighten(rgb(253, 115, 100), 10%)
+        );
+      }
+
+      .ms-header__title {
+        flex: 1 1 100%;
+        width: 100%;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+      }
+
+      .ms-slider {
+        display: inline-block;
+
+        height: 1.5em;
+        overflow: hidden;
+
+        vertical-align: middle;
+
+        mask-image: linear-gradient(
+          transparent,
+          white,
+          white,
+          white,
+          transparent
+        );
+        mask-type: luminance;
+        mask-mode: alpha;
+      }
+
+      .ms-slider__words {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+
+        animation-name: wordSlider;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
+        animation-duration: 7s;
+      }
+
+      .ms-slider__word {
+        display: block;
+        line-height: 1.3em;
+        text-align: left;
+      }
+
+      @keyframes wordSlider {
+        0%,
+        -25%,
+        -50%,
+        -75% {
+          transform: translateY(0%);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
+
+      .li1,
+      .li2,
+      .li3,
+      .li4,
+      .li5,
+      .li6 {
+        padding: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin: 10px;
+        text-decoration: none;
+        color: white;
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        font-size: larger;
+      }
+
+      .li1,
+      .li2,
+      .li3,
+      .li4 {
+        background-color: #1a0b50;
+      }
+
+      .li5,
+      .li6 {
+        border-radius: 25px;
+      }
+
+      .li5 {
+        border-style: ridge;
+        border-color: #f2f4ffe6;
+      }
+
+      .li6 {
+        background-color: #00ff40;
+        color: #1a0b50;
+      }
+
+      .box-header1 {
+        color: white;
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 40px;
+      }
+
+      .ms-slider {
+        color: white;
+      }
+
+      .ms-header__title {
+        color: #e6eaff99;
+        font-size: 20px;
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .box-button1 {
+        background-color: #00ff40;
+        padding: 15px;
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-size: large;
+        border-radius: 25px;
+      }
+
+      .div-child1,
+      .div-child2 {
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-size: large;
+      }
+
+      .div-child1 {
+        color: #e6eaff99;
+      }
+
+      .div-child2 {
+        color: white;
+        text-decoration: underline;
+        margin-bottom: 5%;
+        margin-left: 1%;
+      }
+
+      .just-text {
+        margin-top: 700px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .container2 {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+      }
+
+      .table1 {
+       background-color: rgb(29, 26, 26);
+        padding: 60px;
+        width: 40%;
+        margin-right: 1.5%;
+        margin-bottom: 10%;
+        border-radius: 20px;
+        color: #e6eaff99;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .fortalent_parent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+     .fortalent_child1 {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+     }
+
+     .for2 {
+      width: 20%;
+      height: 60%;
+     }
+      
+     .fortalent_child2 {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      justify-content: center;
+      align-items: center;
+     }
+
+     .for3 {
+      width: 20%;
+      height: 60%;
+     }
+  
+     .fortalent_child3 {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: start;
+      align-items: center;
+     }
+     
+     .for4 {
+      width: 15%;
+      height: 80%;
+     }
+     
+.fortalent_button, .findtalent_button {
+  background-color: #00ff40;
+  padding: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        border-radius: 15px;
+        font-size: large;
+}
+.fortalent_button {
+  margin-top: 10%;
+}
+
+.findtalent_button {
+  margin-top: 12%;
+}
+
+.fortalent_footer {
+  margin: 10%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0%;
+}
+
+.fortalent_heading,
+    .fortalent_heading1,
+    .fortalent_heading2,
+    .fortalent_heading3, 
+    .findtalent_lastp,   .findtalent_heading,
+    .findtalent_heading1,
+    .findtalent_heading2,
+    .findtalent_heading3,
+    .fortalent_lastp {color: white;
+      font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        font-size: l50px;}
+
+      .table2 {
+        background-color: rgb(29, 26, 26);
+        padding: 60px;
+        width: 40%;
+        margin-left: 1.5%;
+        margin-bottom: 10%;
+        border-radius: 20px;
+        color: #e6eaff99;
+        display: flex;
+        flex-direction: column;
+
+      }
+
+      .findtalent_parent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .findtalent_child1 {
+        display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      margin-top: 5%;
+      align-items: center;
+      }
+
+      .findalent_child2 {
+        display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      justify-content: start;
+      align-items: center;
+      margin-top: 5%;
+      }
+
+  .findtalent_child3 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    margin-top: 5%;
+    align-items: center;
+  }
+
+  .find2{ 
+    width: 15%;
+    height: 80%;
+  }
+  .find4 {
+  height: 60%;
+  }
+
+  .findtalent_footer {
+    margin: 0%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+   .fortalent_p,
+   .fortalent_p1,
+   .fortalent_p2,
+   .fortalent_p3, 
+   fortalent_button, 
+   .findtalent_p,
+   .findtalent_p1,
+   .findtalent_p2,
+   .findtalent_p3,
+   .findtalent_button {
+    font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+   }
+  
+
+
+      /* brand-logo-slider */
+      /* Common */
+      body {
+        padding: 2rem;
+      }
+
+      .txtcenter {
+        text-align: center;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+
+      /* Brand logo slider */
+      .brands {
+        position: relative;
+        overflow: hidden;
+        height: 8.5rem;
+      }
+
+      .brands:hover .brands__wrapper,
+      .brands:hover .brands__preWrapper {
+        animation-play-state: paused;
+      }
+
+      .brands__preWrapper {
+        position: relative;
+        width: 100%;
+        height: 8.5rem;
+        transform: translateX(0%);
+        animation: scroll1 10s linear infinite;
+        animation-delay: 4s;
+        animation-direction: alternate;
+
+        will-change: transform;
+      }
+
+      .brands__wrapper {
+        position: absolute;
+        white-space: nowrap;
+        transform: translateX(0%) translateZ(0);
+        animation: scroll2 10s linear infinite;
+        animation-delay: 4s;
+        animation-direction: alternate;
+
+        will-change: transform;
+      }
+
+      .brands__wrapper > a,
+      .brands__wrapper > img {
+        position: relative;
+        display: inline-block;
+        margin: 0 1rem;
+        vertical-align: middle;
+      }
+
+      .brands__wrapper > a img {
+        max-width: 15rem;
+        max-height: 8.5rem;
+      }
+
+      .slider1 {
+        background-color: rgb(53, 48, 48);
+        padding: 10px;
+        border-radius: 12px;
+      }
+      .slider2 {
+        background-color: rgb(53, 48, 48);
+        padding: 22px;
+        border-radius: 12px;
+      }
+      .slider3 {
+        background-color: rgb(53, 48, 48);
+        padding: 25px;
+        border-radius: 12px;
+      }
+      .slider4 {
+        background-color: rgb(53, 48, 48);
+        padding: 17px;
+        border-radius: 12px;
+      }
+      .slider5 {
+        background-color: rgb(53, 48, 48);
+        padding: 27px;
+        border-radius: 12px;
+      }
+
+      .slider6 {
+        background-color: rgb(53, 48, 48);
+        padding: 27px;
+        border-radius: 12px;
+      }
+
+
+      .not-slider {
+       background-color: rgb(29, 26, 26);
+       color:white ;
+       border-radius: 10px;
+       padding: 2%;
+       margin-top: 6%;
+       width: fit-content;
+      }
+.wrapper-bullets {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+
+.bullets-png {
+  margin-right: 15px;
+}
+
+.booke-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space;
+}
+
+.brooke-img {
+  margin-right: 15px;
+}
+
+.brooke-and-bullets {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quote-img {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.brooke-h3, .brooke {
+  font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+}
+
+.narrative {
+  color: #e6eaff99;
+  font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+}
+
+.container3 {
+  margin-top: 5%;
+  /* margin-left: -70px;
+  margin-right: -70px; */  
+}
+
+
+.build-container, .join-container, .see-container {
+  background-color:rgb(29, 26, 26);
+}
+
+.build-h3, .join-h3, .see-h3 {
+  color: white;
+  font-size: 30px;
+}
+
+.build-p, .join-p, .see-p {
+ color: #e6eaff99;
+ font-size: 20px;
+}
+
+.build-container, .see-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.join-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.build-wrapper, .join-wrapper, .see-wrapper {
+  padding: 10%;
+  font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+}
+
+.build-img, .join-img, .see-img {
+  margin: 5%;
+  }
+
+
+.join-container, .build-container, .see-container {
+  margin: 5%;
+  }
+
+.build-portfolio, .join-portfolio, .see-portfolio {
+  background-color: #00ff40;
+  padding: 25px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        border-radius: 15px;
+        font-size: smaller;
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 15px;
+}
+
+
+.small-container {
+  background-color:#1a0b50;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 25px;
+}
+
+.small-container-button {
+  background-color: #00ff40;
+  padding: 25px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        border-radius: 15px;
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 15px;
+        display: block;
+        margin: 0 auto;
+}
+
+
+.footer-first_line_p , .footer-second_line, .footer-third_line, .footer-copy{
+  color: #e6eaff99;
+  font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: smaller;
+}
+
+.footer_container {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  background-color:rgb(29, 26, 26);
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.footer_logos {
+  margin-top: 15px;
+}
+
+
+
+      @keyframes scroll1 {
+        0% {
+          transform: translateX(-0%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      @keyframes scroll2 {
+        0% {
+          transform: translateX(0%) translateZ(0);
+        }
+        100% {
+          transform: translateX(-100%) translateZ(0);
+        }
+      }
+
+      @media screen and (max-width: 700px) {
+        .container-wrapper {
+          flex-direction: column;
+        }
+        .first-container {
+          flex-direction: column;
+        }
+        .covervideo {
+          margin: auto;
+        }
+        .just-text {
+          flex-wrap: wrap;
+        }
+      }
+
+      @media screen and (max-width: 375px) {
+  .container2, .container3 {
+    flex-direction: column;
+    margin: auto;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <div class="container-wrapper">
+      <header>
+        <div class="navdiv">
+          <img class="logo" src="./thexplace-logo.png" />
+          <nav class="navbar">
+            <ul class="navdirection">
+              <li class="li1">About</li>
+              <li class="li2">For Talent</li>
+              <li class="li3">Find Talent</li>
+              <li class="li4">Jobs</li>
+              <li class="li5">Sign in</li>
+              <li class="li6">Join</li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="first-container">
+        <div class="cover-video"><video autoplay muted loop class="covervideo">
+          <source src="./mobile-hero-video.mp4" />
+        </video></div>
+          <div class="textbox">
+          <div class="box-header1-h1"><h1 class="box-header1">Great games start with great people</h1></div>
+          <div class="div-slider"><header class="ms-header">
+            <h1 class="ms-header__title">
+              Finding
+              <div class="ms-slider">
+                <ul class="ms-slider__words">
+                  <li class="ms-slider__word">steady work</li>
+                  <li class="ms-slider__word">easy work</li>
+                  <li class="ms-slider__word">powerful work</li>
+                  <li class="ms-slider__word">steady work</li>
+                </ul>
+              </div>
+              shouldn't be a challenge.
+            </h1>
+          </header></div>
+          <button class="box-button1">Join early access</button>
+        </div>
+      </div>
+
+      <main>
+        <div class="just-text">
+          <p class="div-child1">
+            Join TheXPlace Community for exceptional gaming proffessional.
+          </p>
+          <p class="div-child2">Own your Awesome!</p>
+        </div>
+
+        <div class="container2">
+          <div class="table1">
+            <div class="fortalent_parent">
+              <h1 class="fortalent_heading">For Talent</h1>
+              <img src="./talent1.png">
+                          </div>
+                          <p class="fortalent_p">Join the top skilled video games professional community, to accelerate your career</p>
+      
+            <div class="fortalent_child1">
+              <h1 class="fortalent_heading1">Create a Portfolio that gets you hired</h1>
+              <img class="for2" src="./for2.png">
+            </div>
+              <p class="fortalent_p1">We know you're great. Let's package your superpowers to show it and unlock a stable flow of jobs you desire.</p>
+             
+      
+            <div class="fortalent_child2">
+              <h1 class="fortalent_heading2">Get access to gaiming jobs, anywhere</h1>
+              <img class="for3" src="./for3.png">
+            </div>
+              <p class="fortalent_p2">Search or get discovered for opportunities that match your skills and interests, with vetted companies.</p>
+
+            <div class="fortalent_child3">
+              <h1 class="fortalent_heading3">Make more money</h1>
+              <img class="for4" src="./for4.png">
+            </div>
+            <p class="fortalent_p3">No talent fees so you can keep 100% of what you earn.</p>
+
+              <div class="fortalent_footer">
+                <div class="footer_for">
+                <button class="fortalent_button">Join</button>
+              </div>
+              <div>
+                <p class="findtalent_lastp">Learn more</p>
+              </div>
+              </div>
+          </div>
+
+
+          <div class="table2">
+            <div class="findtalent_parent">
+              <h1 class="findtalent_heading">Find Talent</h1>
+              <img src="./Find talent icon.png">
+            </div>
+              <p class="findtalent_p">Post a job or hire from our top vetted talent community. Find a match, instantly.</p>
+            
+
+            <div class="findtalent_child1">
+              <h1 class="findtalent_heading1">Hire with confidence</h1>
+              <img class="find2" src="./find2.png">
+            </div>
+              <p class="findtalent_p1">We meticoulessly screen and vet Talent, so you don't have to.</p>
+            
+
+            <div class="findalent_child2">
+              <h1 class="findtalent_heading2">Find the best fit, faster</h1>
+              <img class="find3" src="./find3.png">
+            </div>
+              <p class="findtalent_p2">View portfolios, skills, credits, and more. All the essential info, is right there at your finger-tips.</p>
+            
+            
+            <div class="findtalent_child3">
+              <h1 class="findtalent_heading3">Stretch your budget further</h1>
+              <img class="find4" src="./find4.png">
+            </div>
+              <p class="findtalent_p3">Skip the hefty middleman markups and deploy more budget yo your games.</p>
+
+              <div class="findtalent_footer">
+                <div class="footer_find">
+                <button class="findtalent_button">Post a job</button>
+              </div>
+              <div>
+                <p class="fortalent_lastp">Learn more</p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="brands">
+            <div class="brands__preWrapper">
+              <div class="brands__wrapper">
+                <a class="slider1" href="#"><img src="logo1.png" /></a>
+                <a class="slider2" href="#"><img src="./logo2.2.png" /></a>
+                <a class="slider3" href="#"><img src="./logo3.png" /></a>
+                <a class="slider4" href="#"><img src="./logo4.png" /></a>
+                <a class="slider5" href="#"><img src="./logo 5.png" /></a>
+                <a class="slider6" href="#"><img src="./logo6.png" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- Brooke Maggs-is sekcia -->
+<section class="not-slider">
+  <div class="text">
+    <div class="quote">
+      <img class="quote-img" src="https://thexplace.ai/wp-content/themes/thexplace/images/quote.png">
+    </div>
+    <h2 class="brooke-h3">As a creative professional, my work takes many different forms. With TheXPlace, I can showcase my work in a way that's personal and authentic to me.</h2>
+  </div>
+  <div class="brooke-and-bullets">
+  <div class="booke-wrapper">
+    <div>
+      <img class="brooke-img" src="./brooke.png">
+    </div>
+      <div class="brooke">
+        <p>Brooke Maggs</p>
+        <p class="narrative">Narrative Designer</p>
+      </div>
+    </div>
+   <div class="wrapper-bullets">
+  <div class="bullets">
+   <img class="bullets-png" src="./bullets.png">
+  </div>
+  <div>
+    <img src="./Button right.png">
+  </div>
+</div>
+  </div>
+</section> 
+
+
+<!-- romelic shedgeba 3 divisgan > BUILD. .-->
+<section class="container3">
+<div class="build-container">
+<div class="build-wrapper">
+<div class="build-h3"><h3>A visually rich way to express yourself</h3></div>
+<div><p class="build-p">We're the most visually rich industry and one of the most innovative ones. It's time, we had a friction-free, visually rich way to find work and be discovered.</p></div>
+<button class="build-portfolio"> Build Portfolio</button>
+</div>
+<div class="build-img">
+  <img src="https://media.licdn.com/dms/image/C5603AQHras1nYtyvsg/profile-displayphoto-shrink_800_800/0/1574778491188?e=2147483647&v=beta&t=YmcNzx3Laqbtch0SvizmUDW3SfueniZy1EsiUS-bL9Q" width="400" height="400">
+</div>
+</div>
+
+
+
+<!-- meore divi > JOIN.-->
+<div class="join-container">
+<div class="join-wrapper">
+<div class="join-h3"><h3>Network optimized for quality</h3></div>
+<div><p class="join-p">TheXPlace is the largest power-network, connecting top skilled Gaming professionals and reputable companies. We vet professionals and comopanies, removing a lot of the wasted time, headaches and heartaches that can come from securing remote work.</p></div>
+<button class="build-portfolio"> Join</button>
+</div>
+<div class="join-img">
+  <img src="https://i1.sndcdn.com/artworks-000486414654-mt7qdt-t500x500.jpg" width="400" height="400">
+</div>
+</div>
+
+
+
+
+<!-- mesame divi > SEE.-->
+<div class="see-container">
+  <div class="see-wrapper">
+  <div class="see-h3"><h3>Find your dream job, wherever it may be...</h3></div>
+  <div><p class="see-p">Talent is everywhere, we're democratizing access to work opportunities. Use our refined system of jobs suggestions to find jobs worldwide.</p></div>
+  <button class="see-portfolio">See jobs</button>
+  </div>
+  <div class="see-img">
+    <img src="https://www.boxofficepro.com/wp-content/uploads/2023/08/dune-2-e1709483165491.png" width="400" height="400">
+  </div>
+  </div>
+</section>
+
+<div class="small-container">
+<div class="small-container-h2"><h2>Join the community of top vetted game professionals</h2>
+<button class="small-container-button">Join early access</button>
+</div>
+      </main>
+    </div>
+
+
+    <footer class="footer_container">
+      <div class="footer-first_line">
+        <div class="logo"><img class="footer-logo" src="./thexplace-logo.png" width="200px"/></div>
+        <div class="footer-first_line_p">
+          <p>For Talent</p>
+          <p>Find Talent</p>
+          <p>Jobs</p>
+          </div>
+      </div>
+
+   <div class="footer-second_line">
+    <div class="footer_about"><p>About</p></div>
+    <div class="footer_faq"><p>FaQ</p></div>
+   </div>
+    
+
+      <div class="footer-third_line">
+    <div class="footer_tor"><p>Terms of Serivce</p></div>
+    <div class="footer_contact"><p>Contact us</p></div>
+   </div>
+    
+   <div class="footer_logos">
+    <img src="./Subtract.png">
+    <img src="./linkedin.png">
+    <img src="./facebook.png">
+    <img src="./Discord.png">
+  </div>
+
+  <div class="footer-copy">&copy; TheXPlace 2021</div>
+    </footer>
+
+  </body>
+</html>
